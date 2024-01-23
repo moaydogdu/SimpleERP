@@ -3,6 +3,11 @@ server:
 
 spring:
 
+  liquibase:
+    enabled: true
+    changeLog: "classpath:db/changelog/db.changelog-master.yaml"
+    drop-first: ${SIMPLE_ERP_LIQUIBASE_ENABLE_DROP_FIRST:true}
+
   datasource:
     url: jdbc:mysql://${SIMPLE_ERP_DB_IP:localhost}:${SIMPLE_ERP_DB_PORT:3306}/simple_erp
     username: ${SIMPLE_ERP_DB_USERNAME:root}
@@ -10,11 +15,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: false
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
