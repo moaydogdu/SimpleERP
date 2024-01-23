@@ -51,4 +51,15 @@ public class ProductServiceImpl implements ProductService {
                 productEntityPage
         );
     }
+
+    @Override
+    public Product getProductByNumber(
+            final Long productNumber
+    ) {
+        final ProductEntity productEntity = productRepository
+                .findProductEntityByNumber(productNumber)
+                .orElseThrow(ProductNotFoundException::new);
+
+        return ProductMapper.toDomainModel(productEntity);
+    }
 }
