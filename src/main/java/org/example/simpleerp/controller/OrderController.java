@@ -7,15 +7,20 @@ import org.example.simpleerp.common.model.dto.CustomPagingResponse;
 import org.example.simpleerp.model.Order;
 import org.example.simpleerp.model.dto.order.request.OrderCreateRequest;
 import org.example.simpleerp.model.dto.order.request.OrderPagingRequest;
+import org.example.simpleerp.model.dto.order.request.OrderUpdateRequest;
 import org.example.simpleerp.model.mapper.order.OrderDTOMapper;
 import org.example.simpleerp.service.order.OrderCreateService;
+import org.example.simpleerp.service.order.OrderDeleteService;
 import org.example.simpleerp.service.order.OrderService;
+import org.example.simpleerp.service.order.OrderUpdateService;
 import org.hibernate.validator.constraints.UUID;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,9 +33,8 @@ public class OrderController {
 
     private final OrderService orderService;
     private final OrderCreateService orderCreateService;
-
-    // TODO : UPDATE Order
-    // TODO : DELETE Order
+    private final OrderUpdateService orderUpdateService;
+    private final OrderDeleteService orderDeleteService;
 
     @PostMapping
     public ResponseEntity<Order> createOrder(
@@ -63,6 +67,26 @@ public class OrderController {
                 .toCustomPagingResponse(ordersFromDB);
 
         return ResponseEntity.ok(response);
+    }
+
+    @PutMapping("/{orderId}")
+    public ResponseEntity<Order> updateOrderById(
+            @PathVariable("orderId") @UUID final String orderId,
+            @RequestBody @Valid final OrderUpdateRequest orderUpdateRequest
+    ) {
+        final Order updatedOrder = orderUpdateService
+                .updateOrder(orderId,orderUpdateRequest);
+
+        return ResponseEntity.ok(updatedOrder);
+    }
+
+    @DeleteMapping("/{orderId}")
+    public ResponseEntity<Void> deleteOrderById(
+            @PathVariable("orderId") @UUID final String orderId
+    ) {
+        orderDeleteService.deleteOrderById(orderId);
+
+        return ResponseEntity.ok().build();
     }
 
 }
