@@ -5,7 +5,7 @@ import org.example.simpleerp.common.util.PriceCalculator;
 import org.example.simpleerp.model.Order;
 import org.example.simpleerp.model.OrderProduct;
 import org.example.simpleerp.model.Product;
-import org.example.simpleerp.model.dto.order.OrderProductRequest;
+import org.example.simpleerp.model.dto.orderProduct.request.OrderProductRequest;
 import org.example.simpleerp.model.entity.OrderProductEntity;
 import org.example.simpleerp.model.mapper.orderProduct.OrderProductDTOMapper;
 import org.example.simpleerp.model.mapper.orderProduct.OrderProductMapper;

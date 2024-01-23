@@ -1,4 +1,4 @@
-package org.example.simpleerp.model.dto.order;
+package org.example.simpleerp.model.dto.orderProduct.request;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
