@@ -4,6 +4,7 @@ import org.example.simpleerp.common.model.CustomPage;
 import org.example.simpleerp.common.model.dto.CustomPagingResponse;
 import org.example.simpleerp.model.Order;
 import org.example.simpleerp.model.dto.order.request.OrderCreateRequest;
+import org.example.simpleerp.model.dto.order.request.OrderUpdateRequest;
 import org.example.simpleerp.model.entity.OrderEntity;
 
 import java.math.BigDecimal;
@@ -28,5 +29,12 @@ public class OrderDTOMapper {
                         customOrderPage.getContent()
                 )
                 .build();
+    }
+
+    public static void mapForUpdating(
+            final OrderEntity orderEntityFromDBToBeUpdate,
+            final OrderUpdateRequest orderUpdateRequest
+    ) {
+        orderEntityFromDBToBeUpdate.setNumber(orderUpdateRequest.getNumber());
     }
 }
