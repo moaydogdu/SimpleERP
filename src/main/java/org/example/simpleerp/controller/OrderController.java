@@ -2,8 +2,12 @@ package org.example.simpleerp.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.example.simpleerp.common.model.CustomPage;
+import org.example.simpleerp.common.model.dto.CustomPagingResponse;
 import org.example.simpleerp.model.Order;
 import org.example.simpleerp.model.dto.order.request.OrderCreateRequest;
+import org.example.simpleerp.model.dto.order.request.OrderPagingRequest;
+import org.example.simpleerp.model.mapper.order.OrderDTOMapper;
 import org.example.simpleerp.service.order.OrderCreateService;
 import org.example.simpleerp.service.order.OrderService;
 import org.hibernate.validator.constraints.UUID;
@@ -25,8 +29,6 @@ public class OrderController {
     private final OrderService orderService;
     private final OrderCreateService orderCreateService;
 
-    // TODO : GET Order
-    // TODO : GETALL Order
     // TODO : UPDATE Order
     // TODO : DELETE Order
 
@@ -50,5 +52,17 @@ public class OrderController {
         return ResponseEntity.ok(orderFromDB);
     }
 
+    @GetMapping
+    public ResponseEntity<CustomPagingResponse<Order>> getOrders(
+            @RequestBody @Valid final OrderPagingRequest orderPagingRequest
+    ) {
+        final CustomPage<Order> ordersFromDB = orderService
+                .getAllOrders(orderPagingRequest);
+
+        final CustomPagingResponse<Order> response = OrderDTOMapper
+                .toCustomPagingResponse(ordersFromDB);
+
+        return ResponseEntity.ok(response);
+    }
 
 }
