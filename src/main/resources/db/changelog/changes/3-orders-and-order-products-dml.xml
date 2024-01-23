@@ -1,0 +1,84 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <!-- ================================== -->
+    <!-- DML of example ORDERS data      -->
+    <!-- ================================== -->
+    <changeSet id="insertOrdersExampleData1" author="moaydogdu">
+        <insert tableName="ORDERS">
+            <column name="ID" value="0ba5d259-794f-4d7f-8c9a-9fb6b50fe574"/>
+            <column name="NUMBER" value="1000"/>
+            <column name="TOTAL_PRICE" value="34395.0400"/>
+        </insert>
+    </changeSet>
+    <!-- ================================== -->
+    <!-- DML of example ORDERS data      -->
+    <!-- ================================== -->
+
+
+    <!-- ================================== -->
+    <!-- DML of example ORDER_PRODUCT data      -->
+    <!-- ================================== -->
+    <changeSet id="insertOrderProductExampleData1" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="54dff0f9-0d17-47e2-b888-d79ff8442b4a"/>
+            <column name="ORDER_ID" value="0ba5d259-794f-4d7f-8c9a-9fb6b50fe574"/>
+            <column name="PRODUCT_ID" value="b58f670a-37ac-4534-99a5-ea9667838de5"/>
+            <column name="AMOUNT" value="12.0000"/>
+            <column name="UNIT_PRICE" value="100.5100"/>
+            <column name="TOTAL_PRICE" value="1206.1200"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="insertOrderProductExampleData2" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="e024cae4-e7c2-4b82-9c1b-17023235faff"/>
+            <column name="ORDER_ID" value="0ba5d259-794f-4d7f-8c9a-9fb6b50fe574"/>
+            <column name="PRODUCT_ID" value="2d2fe999-71fe-40ed-aec4-1d019cc219a7"/>
+            <column name="AMOUNT" value="31.0000"/>
+            <column name="UNIT_PRICE" value="200.0000"/>
+            <column name="TOTAL_PRICE" value="6200.0000"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="insertOrderProductExampleData3" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="fc16ce3b-7523-4c84-9094-60bce88f69e2"/>
+            <column name="ORDER_ID" value="0ba5d259-794f-4d7f-8c9a-9fb6b50fe574"/>
+            <column name="PRODUCT_ID" value="914aaa29-3e30-482b-b0ac-ec4531edee1a"/>
+            <column name="AMOUNT" value="22.0000"/>
+            <column name="UNIT_PRICE" value="150.8600"/>
+            <column name="TOTAL_PRICE" value="3318.9200"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="insertOrderProductExampleData4" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="a3a3721b-2f20-4d14-977e-ca1db4070256"/>
+            <column name="ORDER_ID" value="0ba5d259-794f-4d7f-8c9a-9fb6b50fe574"/>
+            <column name="PRODUCT_ID" value="b09abbce-efd0-4be0-89ed-c92b456d815a"/>
+            <column name="AMOUNT" value="41.0000"/>
+            <column name="UNIT_PRICE" value="250.0000"/>
+            <column name="TOTAL_PRICE" value="10250.000"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="insertOrderProductExampleData5" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="e25c3543-6cda-4c3a-8b22-6a2109cf85aa"/>
+            <column name="ORDER_ID" value="0ba5d259-794f-4d7f-8c9a-9fb6b50fe574"/>
+            <column name="PRODUCT_ID" value="d74ff6a1-ef15-4082-ba69-28cc2951777c"/>
+            <column name="AMOUNT" value="55.0000"/>
+            <column name="UNIT_PRICE" value="244.0000"/>
+            <column name="TOTAL_PRICE" value="13420.0000"/>
+        </insert>
+    </changeSet>
+    <!-- ================================== -->
+    <!-- DML of example ORDERS data      -->
+    <!-- ================================== -->
+</databaseChangeLog>
