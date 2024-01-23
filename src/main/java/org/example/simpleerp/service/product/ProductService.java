@@ -12,4 +12,8 @@ public interface ProductService {
     CustomPage<Product> getProducts(
             final CustomPagingRequest customPagingRequest
     );
+
+    Product getProductByNumber(
+            final Long productNumber
+    );
 }
