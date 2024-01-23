@@ -1,0 +1,73 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <!-- ================================== -->
+    <!-- DML of example ORDERS data      -->
+    <!-- ================================== -->
+    <changeSet id="insertOrdersExampleData1" author="moaydogdu">
+        <insert tableName="ORDERS">
+            <column name="ID" value="5982b0f2-f3ff-4020-9bd1-c8ea9d39413c"/>
+            <column name="NUMBER" value="1001"/>
+            <column name="TOTAL_PRICE" value="31427.5780"/>
+        </insert>
+    </changeSet>
+    <!-- ================================== -->
+    <!-- DML of example ORDERS data      -->
+    <!-- ================================== -->
+
+
+    <!-- ================================== -->
+    <!-- DML of example ORDER_PRODUCT data      -->
+    <!-- ================================== -->
+    <changeSet id="insertOrderProductExampleData1" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="c90ddb7d-53cc-4b91-a503-20c9307fb1fc"/>
+            <column name="ORDER_ID" value="5982b0f2-f3ff-4020-9bd1-c8ea9d39413c"/>
+            <column name="PRODUCT_ID" value="2d2fe999-71fe-40ed-aec4-1d019cc219a7"/>
+            <column name="AMOUNT" value="88.0000"/>
+            <column name="UNIT_PRICE" value="44.5310"/>
+            <column name="TOTAL_PRICE" value="3918.7280"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="insertOrderProductExampleData2" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="a728219c-6be5-4766-ad03-b7248f2e5765"/>
+            <column name="ORDER_ID" value="5982b0f2-f3ff-4020-9bd1-c8ea9d39413c"/>
+            <column name="PRODUCT_ID" value="914aaa29-3e30-482b-b0ac-ec4531edee1a"/>
+            <column name="AMOUNT" value="121.0000"/>
+            <column name="UNIT_PRICE" value="88.1100"/>
+            <column name="TOTAL_PRICE" value="10661.3100"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="insertOrderProductExampleData3" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="3167c141-7266-49bd-b954-f3331c5364d9"/>
+            <column name="ORDER_ID" value="5982b0f2-f3ff-4020-9bd1-c8ea9d39413c"/>
+            <column name="PRODUCT_ID" value="d74ff6a1-ef15-4082-ba69-28cc2951777c"/>
+            <column name="AMOUNT" value="74.0000"/>
+            <column name="UNIT_PRICE" value="211.0000"/>
+            <column name="TOTAL_PRICE" value="15614.0000"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="insertOrderProductExampleData4" author="moaydogdu">
+        <insert tableName="ORDER_PRODUCT">
+            <column name="ID" value="e6166bbc-9acf-4f15-b45c-be7a50da3613"/>
+            <column name="ORDER_ID" value="5982b0f2-f3ff-4020-9bd1-c8ea9d39413c"/>
+            <column name="PRODUCT_ID" value="914aaa29-3e30-482b-b0ac-ec4531edee1a"/>
+            <column name="AMOUNT" value="14.0000"/>
+            <column name="UNIT_PRICE" value="88.1100"/>
+            <column name="TOTAL_PRICE" value="1233.5400"/>
+        </insert>
+    </changeSet>
+    <!-- ================================== -->
+    <!-- DML of example ORDERS data      -->
+    <!-- ================================== -->
+
+</databaseChangeLog>
