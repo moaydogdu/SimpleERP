@@ -15,6 +15,8 @@ public class OrderMapper {
                 .number(orderEntity.getNumber())
                 .totalPrice(orderEntity.getTotalPrice())
                 .orderProducts(
+                        orderEntity.getOrderProductEntities() == null ?
+                                null :
                         OrderProductMapper.toDomainModel(orderEntity.getOrderProductEntities())
                 )
                 .build();
