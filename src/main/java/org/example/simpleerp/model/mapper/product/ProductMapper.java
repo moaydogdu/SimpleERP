@@ -38,4 +38,16 @@ public class ProductMapper {
                 )
                 .build();
     }
+
+    public static ProductEntity toEntity(
+           final Product product
+    ) {
+        return ProductEntity.builder()
+                .id(product.getId())
+                .name(product.getName())
+                .number(product.getNumber())
+                .price(product.getPrice())
+                // TODO : OrderProduct'lar için mapleme?
+                .build();
+    }
 }
