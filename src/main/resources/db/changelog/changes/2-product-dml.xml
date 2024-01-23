@@ -1,0 +1,73 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <!-- ================================== -->
+    <!-- DML of example PRODUCT data      -->
+    <!-- ================================== -->
+    <changeSet id="insertProductExampleData1" author="moaydogdu">
+        <insert tableName="PRODUCT">
+            <column name="ID" value="b58f670a-37ac-4534-99a5-ea9667838de5"/>
+            <column name="NAME" value="Example Product 1"/>
+            <column name="NUMBER" value="2000"/>
+            <column name="PRICE" value="60.0000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insertProductExampleData2" author="moaydogdu">
+        <insert tableName="PRODUCT">
+            <column name="ID" value="2d2fe999-71fe-40ed-aec4-1d019cc219a7"/>
+            <column name="NAME" value="Example Product 2"/>
+            <column name="NUMBER" value="2001"/>
+            <column name="PRICE" value="65.0000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insertProductExampleData3" author="moaydogdu">
+        <insert tableName="PRODUCT">
+            <column name="ID" value="914aaa29-3e30-482b-b0ac-ec4531edee1a"/>
+            <column name="NAME" value="Example Product 3"/>
+            <column name="NUMBER" value="2002"/>
+            <column name="PRICE" value="70.0000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insertProductExampleData4" author="moaydogdu">
+        <insert tableName="PRODUCT">
+            <column name="ID" value="b09abbce-efd0-4be0-89ed-c92b456d815a"/>
+            <column name="NAME" value="Example Product 4"/>
+            <column name="NUMBER" value="2003"/>
+            <column name="PRICE" value="75.0000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insertProductExampleData5" author="moaydogdu">
+        <insert tableName="PRODUCT">
+            <column name="ID" value="d74ff6a1-ef15-4082-ba69-28cc2951777c"/>
+            <column name="NAME" value="Example Product 5"/>
+            <column name="NUMBER" value="2004"/>
+            <column name="PRICE" value="80.0000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insertProductExampleData6" author="moaydogdu">
+        <insert tableName="PRODUCT">
+            <column name="ID" value="484e9374-ae5f-4abe-83e8-bf8dae0e26b9"/>
+            <column name="NAME" value="Example Product 6"/>
+            <column name="NUMBER" value="2005"/>
+            <column name="PRICE" value="85.0000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insertProductExampleData7" author="moaydogdu">
+        <insert tableName="PRODUCT">
+            <column name="ID" value="dba3a89a-9de1-4f1b-9583-ff0536f1e3e7"/>
+            <column name="NAME" value="Example Product 7"/>
+            <column name="NUMBER" value="2006"/>
+            <column name="PRICE" value="90.0000"/>
+        </insert>
+    </changeSet>
+    <!-- ================================== -->
+    <!-- DML of example PRODUCT data      -->
+    <!-- ================================== -->
+</databaseChangeLog>
