@@ -1,4 +1,4 @@
-package org.example.simpleerp.service.order;
+package org.example.simpleerp.service.orderProduct;
 
 import org.example.simpleerp.model.Order;
 import org.example.simpleerp.model.OrderProduct;
