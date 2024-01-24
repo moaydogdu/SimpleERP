@@ -23,7 +23,7 @@ public class ProductUpdateServiceImpl implements ProductUpdateService {
             final String productId,
             final ProductUpdateRequest productUpdateRequest
     ) {
-        ProductEntity productEntityFromDBToBeUpdate = productRepository
+        final ProductEntity productEntityFromDBToBeUpdate = productRepository
                 .findById(productId)
                 .orElseThrow(ProductNotFoundException::new);
 
