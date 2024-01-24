@@ -3,6 +3,10 @@
 Bu proje basit anlamda bir Product(Ürün) tanımlamayı ve bu ürün veya ürünleri kullanarak Order(Sipariş) oluşturmayı
 sağlayan bir backend projesidir.
 
+## API Dökümanı
+
+[Postman Documentation](https://documenter.getpostman.com/view/32531063/2s9YynkjJn)
+
 ## Başlangıç
 
 Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edin.
