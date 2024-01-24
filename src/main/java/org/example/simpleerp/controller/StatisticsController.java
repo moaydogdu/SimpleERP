@@ -28,7 +28,7 @@ public class StatisticsController {
     public ResponseEntity<String> getTotalPriceOfAllOrders()
     {
         final BigDecimal totalAmountOfAllOrders = orderStatisticsService
-                .getTotalPriceOfAllOrders();
+                .getTotalPriceOfAllOrdersWithJavaCode();
 
         return ResponseEntity.ok("Tüm siparişlerin toplam tutarı: "
                 + totalAmountOfAllOrders);

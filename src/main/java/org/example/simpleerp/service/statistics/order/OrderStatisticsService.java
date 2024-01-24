@@ -4,4 +4,6 @@ import java.math.BigDecimal;
 
 public interface OrderStatisticsService {
     BigDecimal getTotalPriceOfAllOrders();
+
+    BigDecimal getTotalPriceOfAllOrdersWithJavaCode();
 }
