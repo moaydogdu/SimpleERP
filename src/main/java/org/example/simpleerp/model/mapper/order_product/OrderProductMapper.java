@@ -1,4 +1,4 @@
-package org.example.simpleerp.model.mapper.orderProduct;
+package org.example.simpleerp.model.mapper.order_product;
 
 import org.example.simpleerp.model.OrderProduct;
 import org.example.simpleerp.model.entity.OrderProductEntity;

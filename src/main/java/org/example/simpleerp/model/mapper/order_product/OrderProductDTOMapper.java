@@ -1,8 +1,8 @@
-package org.example.simpleerp.model.mapper.orderProduct;
+package org.example.simpleerp.model.mapper.order_product;
 
 import org.example.simpleerp.model.Order;
 import org.example.simpleerp.model.Product;
-import org.example.simpleerp.model.dto.orderProduct.request.OrderProductRequest;
+import org.example.simpleerp.model.dto.order_product.request.OrderProductRequest;
 import org.example.simpleerp.model.entity.OrderProductEntity;
 import org.example.simpleerp.model.mapper.order.OrderMapper;
 import org.example.simpleerp.model.mapper.product.ProductMapper;

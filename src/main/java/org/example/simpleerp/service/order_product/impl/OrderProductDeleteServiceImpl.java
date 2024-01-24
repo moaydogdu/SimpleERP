@@ -1,10 +1,10 @@
-package org.example.simpleerp.service.orderProduct.impl;
+package org.example.simpleerp.service.order_product.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.example.simpleerp.exception.orderProduct.OrderProductNotFoundException;
+import org.example.simpleerp.exception.order_product.OrderProductNotFoundException;
 import org.example.simpleerp.model.entity.OrderProductEntity;
 import org.example.simpleerp.repository.OrderProductRepository;
-import org.example.simpleerp.service.orderProduct.OrderProductDeleteService;
+import org.example.simpleerp.service.order_product.OrderProductDeleteService;
 import org.springframework.stereotype.Service;
 
 @Service

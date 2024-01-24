@@ -12,7 +12,7 @@ import org.example.simpleerp.model.mapper.order.OrderDTOMapper;
 import org.example.simpleerp.model.mapper.order.OrderMapper;
 import org.example.simpleerp.repository.OrderRepository;
 import org.example.simpleerp.service.order.OrderCreateService;
-import org.example.simpleerp.service.orderProduct.OrderProductCreateService;
+import org.example.simpleerp.service.order_product.OrderProductCreateService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

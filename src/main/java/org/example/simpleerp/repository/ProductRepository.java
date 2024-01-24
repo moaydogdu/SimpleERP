@@ -1,6 +1,8 @@
 package org.example.simpleerp.repository;
 
 import org.example.simpleerp.model.entity.ProductEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -18,4 +20,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity, String> 
     );
 
     List<ProductEntity> findAllByOrderByNumberAsc();
+
+    Page<ProductEntity> findAllByOrderByNumberAsc(
+            final Pageable pageable
+    );
 }

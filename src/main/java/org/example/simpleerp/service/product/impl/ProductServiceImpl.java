@@ -36,7 +36,7 @@ public class ProductServiceImpl implements ProductService {
            final CustomPagingRequest customPagingRequest
     ) {
         final Page<ProductEntity> productEntityPage = productRepository
-                .findAll(customPagingRequest.toPageable());
+                .findAllByOrderByNumberAsc(customPagingRequest.toPageable());
 
         if (productEntityPage.getContent().isEmpty())
         {

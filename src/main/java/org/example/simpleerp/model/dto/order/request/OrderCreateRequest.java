@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.simpleerp.model.dto.orderProduct.request.OrderProductRequest;
+import org.example.simpleerp.model.dto.order_product.request.OrderProductRequest;
 
 import java.util.List;
 

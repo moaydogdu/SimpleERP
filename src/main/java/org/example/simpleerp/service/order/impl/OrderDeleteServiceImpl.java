@@ -6,7 +6,7 @@ import org.example.simpleerp.exception.order.OrderNotFoundException;
 import org.example.simpleerp.model.entity.OrderEntity;
 import org.example.simpleerp.repository.OrderRepository;
 import org.example.simpleerp.service.order.OrderDeleteService;
-import org.example.simpleerp.service.orderProduct.OrderProductDeleteService;
+import org.example.simpleerp.service.order_product.OrderProductDeleteService;
 import org.springframework.stereotype.Service;
 
 @Service

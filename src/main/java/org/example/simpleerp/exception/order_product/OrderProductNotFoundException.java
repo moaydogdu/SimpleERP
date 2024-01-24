@@ -1,4 +1,4 @@
-package org.example.simpleerp.exception.orderProduct;
+package org.example.simpleerp.exception.order_product;
 
 import java.io.Serial;
 

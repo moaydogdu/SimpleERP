@@ -2,7 +2,7 @@ package org.example.simpleerp.model.mapper.order;
 
 import org.example.simpleerp.model.Order;
 import org.example.simpleerp.model.entity.OrderEntity;
-import org.example.simpleerp.model.mapper.orderProduct.OrderProductMapper;
+import org.example.simpleerp.model.mapper.order_product.OrderProductMapper;
 
 import java.util.List;
 

@@ -57,7 +57,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<CustomPagingResponse<Product>> getStocks(
+    public ResponseEntity<CustomPagingResponse<Product>> getProducts(
             @RequestBody @Valid final ProductPagingRequest productPagingRequest
     ) {
         final CustomPage<Product> productsFromDB = productService
